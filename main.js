@@ -78,4 +78,22 @@ function eseguiEferma(start, msg, stop) {
   }, stop);
 }
 
-eseguiEferma(1000, "è passatp 1 secondo", 5000);
+//eseguiEferma(1000, "è passatp 1 secondo", 5000);
+
+/*🎯 Snack 8 (Bonus)
+Crea una funzione che simula un conto alla rovescia
+Scrivi una funzione contoAllaRovescia che accetta un numero n e stampa il conto alla rovescia da n a 0, con un intervallo di 1 secondo tra ogni numero. Quando arriva a 0, stampa "Tempo scaduto!" e interrompe il timer.*/
+
+function contoAllaRovescia(n) {
+  let count1 = n;
+  const intervalId = setInterval(() => {
+    count1--;
+    console.log(count1);
+    if (count1 == 0) {
+      clearInterval(intervalId);
+      console.log("tempo scaduto!");
+    }
+  }, 1000);
+}
+
+contoAllaRovescia(10);
