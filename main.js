@@ -30,3 +30,35 @@ const creaTimer = function () {
     console.log("Tempo scaduto!");
   }, 1000);
 };
+
+/*🏆 Snack 5
+Crea una funzione stampaOgniSecondo con setInterval.
+Definisci una funzione che accetta un messaggio e lo stampa ogni secondo.
+
+Nota: Questa funzione creerà un loop infinito. Interrompilo manualmente o usa clearInterval() in un altro script.*/
+
+const stampaOgniSecondo = function (a) {
+  return () => {
+    setInterval(() => {
+      console.log(a);
+    }, 1000);
+  };
+};
+
+const messaggio = stampaOgniSecondo("è passato un secondo");
+
+/*🏆 Snack 6
+Crea un contatore automatico con setInterval:
+Definisci una funzione creaContatoreAutomatico che accetta un intervallo di tempo e restituisce una funzione che avvia un setInterval, incrementando un contatore e stampandolo.*/
+
+function creaContatoreAutomatico(timer) {
+  let count = 0;
+  return () => {
+    setInterval(() => {
+      count++;
+      console.log(count);
+    }, timer);
+  };
+}
+
+const timer4sec = creaContatoreAutomatico(4000);
