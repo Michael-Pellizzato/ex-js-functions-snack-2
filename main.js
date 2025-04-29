@@ -20,3 +20,13 @@ const sottrazione = (a, b) => a - b;
 const divisione = (a, b) => a / b;
 
 const eseguiOperazione = (a, b, operazione) => operazione(a, b);
+
+/*🏆 Snack 4
+Crea un generatore di funzioni creaTimer:
+Scrivi una funzione creaTimer che accetta un tempo (in ms) e restituisce una nuova funzione che avvia un setTimeout per stampare "Tempo scaduto!".*/
+
+const creaTimer = function () {
+  setTimeout(() => {
+    console.log("Tempo scaduto!");
+  }, 1000);
+};
