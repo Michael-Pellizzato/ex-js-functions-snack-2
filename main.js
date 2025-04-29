@@ -68,18 +68,14 @@ Crea una funzione che ferma un timer dopo un certo tempo
 Scrivi una funzione eseguiEferma che accetta un messaggio, un tempo di avvio e un tempo di stop. Il messaggio deve essere stampato a intervalli regolari, ma si deve fermare dopo il tempo di stop.*/
 
 function eseguiEferma(start, msg, stop) {
-  return () => {
-    const intervallo = setInterval(() => {
-      console.log(msg);
-    }, start);
+  const intervalId = setInterval(() => {
+    console.log(msg);
+  }, start);
 
-    setTimeout(() => {
-      clearInterval(intervallo);
-      console.log("stop");
-    }, stop);
-  };
+  setTimeout(() => {
+    clearInterval(intervalId);
+    console.log("stop");
+  }, stop);
 }
 
-const counter = eseguiEferma(1000, "è passato 1 secondo", 5000);
-
-counter();
+eseguiEferma(1000, "è passatp 1 secondo", 5000);
